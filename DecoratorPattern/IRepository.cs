@@ -2,7 +2,7 @@
 
 public interface IRepository
 {
-    public Task<Person> GetPersonById(int id);
+    public Task<Person> GetPersonByIdAsync(int id);
 
     public Task SavePersonAsync(Person person);
 }

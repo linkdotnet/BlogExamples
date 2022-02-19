@@ -20,9 +20,9 @@ var repository = provider.GetRequiredService<IRepository>();
 await repository.SavePersonAsync(person);
 
 var stopwatch = Stopwatch.StartNew();
-await repository.GetPersonById(1);
+await repository.GetPersonByIdAsync(1);
 Console.WriteLine($"First call took {stopwatch.ElapsedMilliseconds} ms");
 
 stopwatch.Restart();
-await repository.GetPersonById(1);
+await repository.GetPersonByIdAsync(1);
 Console.WriteLine($"Second call took {stopwatch.ElapsedMilliseconds} ms");

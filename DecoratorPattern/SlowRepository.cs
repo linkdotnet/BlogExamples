@@ -4,7 +4,7 @@ public class SlowRepository : IRepository
 {
     private readonly List<Person> _people = new();
 
-    public async Task<Person> GetPersonById(int id)
+    public async Task<Person> GetPersonByIdAsync(int id)
     {
         await Task.Delay(1000);
         return _people.Single(p => p.Id == id);

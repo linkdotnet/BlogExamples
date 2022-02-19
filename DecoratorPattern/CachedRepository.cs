@@ -13,11 +13,11 @@ public class CachedRepository : IRepository
         _repository = repository;
     }
 
-    public async Task<Person> GetPersonById(int id)
+    public async Task<Person> GetPersonByIdAsync(int id)
     {
         if (!_memoryCache.TryGetValue(id, out Person value))
         {
-            value = await _repository.GetPersonById(id);
+            value = await _repository.GetPersonByIdAsync(id);
             _memoryCache.Set(id, value);
         }
 
