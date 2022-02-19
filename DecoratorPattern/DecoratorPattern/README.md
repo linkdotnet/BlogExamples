@@ -1,0 +1,2 @@
+﻿# Decorator Pattern to implement caching behavior in a repository
+This example shows how to implement a caching repository via the decorator pattern without touching the original repository implementaiton.
