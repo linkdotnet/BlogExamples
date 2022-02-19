@@ -1,0 +1,26 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+
+appsettings.Development.json
+appsettings.Production.json
+
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.pubxml.user
+*.publishproj
+*.suo
+sitemap.xml
+robots.txt
+.vs/
+.idea/
+*.csproj.user
+*.dotsettings.user
+
+# Coverage files and reports
+/**/TestResults/*
+/**/coverage*.xml
+/CoverageReport/
