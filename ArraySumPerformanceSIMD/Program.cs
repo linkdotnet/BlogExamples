@@ -6,15 +6,15 @@ BenchmarkRunner.Run<ArrayAdd>();
 
 public class ArrayAdd
 {
-    private int[] numbers = Enumerable.Repeat(1, 512).ToArray();
+    private static readonly int[] Numbers = Enumerable.Repeat(1, 512).ToArray();
 
-    [Benchmark]
+    [Benchmark(Baseline = true)]
     public int GetSumNaive()
     {
         var result = 0;
-        for (var index = 0; index < numbers.Length; index++)
+        for (var index = 0; index < Numbers.Length; index++)
         {
-            var i = numbers[index];
+            var i = Numbers[index];
             result += i;
         }
 
@@ -22,28 +22,30 @@ public class ArrayAdd
     }
 
     [Benchmark]
-    public int SumLINQ() => numbers.Sum();
+    public int SumLINQ() => Numbers.Sum();
 
     [Benchmark]
-    public int SumPLQING() => numbers.AsParallel().Sum();
+    public int SumPLINQ() => Numbers.AsParallel().Sum();
 
 
     [Benchmark]
     public int SIMDVectors()
     {
+        // This depends on your hardware
+        // It basically says on how many entries can we performance this single operation
+        // aka how big is "multiple"
         var vectorSize = Vector<int>.Count;
         var accVector = Vector<int>.Zero;
-        for (var i = 0; i <= numbers.Length - vectorSize; i += vectorSize)
+
+        // We are tiling the original list by the hardware vector size
+        for (var i = 0; i <= Numbers.Length - vectorSize; i += vectorSize)
         {
-            var v = new Vector<int>(numbers, i);
+            var v = new Vector<int>(Numbers, i);
             accVector = Vector.Add(accVector, v);
         }
 
+        // Scalar-Product of our vector against the Unit vector is its sum
         var result = Vector.Dot(accVector, Vector<int>.One);
-        for (var i = 0; i < numbers.Length; i++)
-        {
-            result += numbers[i];
-        }
         return result;
     }
 }
