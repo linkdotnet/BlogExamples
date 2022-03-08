@@ -1,4 +1,4 @@
-# Branch prediction - cost of an if
+# Using SSE in C# on the example of the sum of a list
 
 The blog post shows how to use SSE in C# and how much faster we can go than a traditional for loop or LINQ.
 
