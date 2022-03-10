@@ -2,20 +2,22 @@
   "solution": {
     "path": "TodoApp.sln",
     "projects": [
-		"TodoApp.Shared\\TodoApp.Shared.shproj",
+		"src\\TodoApp.Shared\\TodoApp.Shared.shproj",
 
-		"TodoApp.Droid\\TodoApp.Droid.csproj",
+		"src\\TodoApp.Droid\\TodoApp.Droid.csproj",
 
-		"TodoApp.iOS\\TodoApp.iOS.csproj",
+		"src\\TodoApp.iOS\\TodoApp.iOS.csproj",
 
 
-		"TodoApp.Wasm\\TodoApp.Wasm.csproj",
+		"src\\TodoApp.Wasm\\TodoApp.Wasm.csproj",
 
-		"TodoApp.macOS\\TodoApp.macOS.csproj",
+		"src\\TodoApp.macOS\\TodoApp.macOS.csproj",
 
-		"TodoApp.Skia.Gtk\\TodoApp.Skia.Gtk.csproj",
+		"src\\TodoApp.Skia.Gtk\\TodoApp.Skia.Gtk.csproj",
 
-		"TodoApp.Skia.Linux.FrameBuffer\\TodoApp.Skia.Linux.FrameBuffer.csproj",
+		"src\\TodoApp.Skia.Linux.FrameBuffer\\TodoApp.Skia.Linux.FrameBuffer.csproj",
+
+		"tests\\UI.Tests\\UI.Tests.csproj",
     ]
   }
 }
