@@ -1,0 +1,21 @@
+{
+  "solution": {
+    "path": "TodoApp.sln",
+    "projects": [
+		"TodoApp.Shared\\TodoApp.Shared.shproj",
+
+		"TodoApp.Droid\\TodoApp.Droid.csproj",
+
+		"TodoApp.iOS\\TodoApp.iOS.csproj",
+
+
+		"TodoApp.Wasm\\TodoApp.Wasm.csproj",
+
+		"TodoApp.macOS\\TodoApp.macOS.csproj",
+
+		"TodoApp.Skia.Gtk\\TodoApp.Skia.Gtk.csproj",
+
+		"TodoApp.Skia.Linux.FrameBuffer\\TodoApp.Skia.Linux.FrameBuffer.csproj",
+    ]
+  }
+}
