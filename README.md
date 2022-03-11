@@ -4,7 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                        | Publish Date |
 | ------------------------------------------------------------------------------- | ------------ |
-| [UNO Platform - Build an ToDo App](TodoApp/)                                    | 10.03.2022   |
+| [UNO Platform - Build an Todo App](TodoApp/)                                    | 10.03.2022   |
 | [Using SSE in C# on the example of the sum of a list](ArraySumPerformanceSIMD/) | 07.03.2022   |
 | [Decorator Pattern with CachedRepository](DecoratorPattern/)                    | 19.02.2022   |
 | [Enum.Equals Performance Analysis](EnumEqualsPerformance/)                      | 11.01.2022   |
