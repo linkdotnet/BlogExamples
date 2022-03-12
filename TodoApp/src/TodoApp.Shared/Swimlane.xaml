@@ -1,14 +1,15 @@
-<Page
-    x:Class="TodoApp.MainPage"
+﻿<UserControl
+    x:Class="TodoApp.Swimlane"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TodoApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    d:DesignHeight="300"
+    d:DesignWidth="400">
 
-    <StackPanel>
-        <local:TitleBar></local:TitleBar>
-    </StackPanel>
-</Page>
+    <Grid>
+
+    </Grid>
+</UserControl>
