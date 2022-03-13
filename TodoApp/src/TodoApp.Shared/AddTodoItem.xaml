@@ -9,7 +9,9 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Button Width="48" Height="48" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <Image Source="ms-appx:///Assets/AddTodoItem.png" Stretch="UniformToFill"/>
+    <Button Width="64" Height="64" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Button.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/AddTodoItem.png"/>
+        </Button.Background>
     </Button>
 </UserControl>

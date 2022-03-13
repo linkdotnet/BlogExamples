@@ -5,40 +5,35 @@
     xmlns:local="using:TodoApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0">
-            <local:TitleBar></local:TitleBar>
-            <Grid Margin="0,20,0,0">
-                <Grid.Resources >
-                    <Style TargetType="Border" >
-                        <Setter Property="Padding" Value="5,5,5,5" />
-                    </Style>
-                </Grid.Resources>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Border Grid.Column="0">
-                    <local:Swimlane State="New"></local:Swimlane>
-                </Border>
-                <Border Grid.Column="1">
-                    <local:Swimlane State="InProgress"></local:Swimlane>
-                </Border>
-                <Border Grid.Column="2">
-                    <local:Swimlane State="Done"></local:Swimlane>
-                </Border>
-            </Grid>
-            <Canvas>
-                <local:AddTodoItem></local:AddTodoItem>
-            </Canvas>
-        </StackPanel>
-    </Grid>
+    <StackPanel Grid.Row="0" x:Name="swimlane">
+        <local:TitleBar></local:TitleBar>
+        <Grid Margin="0,20,0,0">
+            <Grid.Resources >
+                <Style TargetType="Border" >
+                    <Setter Property="Padding" Value="5,5,5,5" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0">
+                <local:Swimlane State="New"></local:Swimlane>
+            </Border>
+            <Border Grid.Column="1">
+                <local:Swimlane State="InProgress"></local:Swimlane>
+            </Border>
+            <Border Grid.Column="2">
+                <local:Swimlane State="Done"></local:Swimlane>
+            </Border>
+        </Grid>
+        <RelativePanel Background="AntiqueWhite">
+            <local:AddTodoItem RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="-128,-128,0,0"/>
+        </RelativePanel>
+    </StackPanel>
 </Page>
