@@ -1,19 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using TodoApp.Domain;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-// The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace TodoApp
 {
@@ -21,7 +8,15 @@ namespace TodoApp
     {
         public Swimlane()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+        }
+
+        public static readonly DependencyProperty KanbanStateProperty = DependencyProperty.Register(nameof(State), typeof(KanbanState), typeof(Swimlane), new PropertyMetadata(KanbanState.New));
+
+        public KanbanState State
+        {
+            get { return (KanbanState)GetValue(KanbanStateProperty); }
+            set { SetValue(KanbanStateProperty, value); }
         }
     }
 }

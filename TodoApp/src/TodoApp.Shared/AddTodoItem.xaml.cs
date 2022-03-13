@@ -2,9 +2,9 @@
 
 namespace TodoApp
 {
-    public sealed partial class TitleBar : UserControl
+    public sealed partial class AddTodoItem : UserControl
     {
-        public TitleBar()
+        public AddTodoItem()
         {
             this.InitializeComponent();
         }

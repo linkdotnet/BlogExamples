@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="TodoApp.Swimlane"
+    x:Class="TodoApp.AddTodoItem"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TodoApp"
@@ -9,10 +9,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <StackPanel MinWidth="200" MinHeight="500" BorderBrush="DarkOliveGreen" BorderThickness="2">
-        <TextBlock Text="{x:Bind State}" HorizontalAlignment="Center"></TextBlock>
-        <ListView>
-            <!-- Here goes our todo item content -->
-        </ListView>
-    </StackPanel>
+    <Button Width="48" Height="48" orizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Image Source="ms-appx:///Assets/AddTodoItem.png" Stretch="UniformToFill"/>
+    </Button>
 </UserControl>

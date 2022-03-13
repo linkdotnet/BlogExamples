@@ -8,7 +8,37 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel>
-        <local:TitleBar></local:TitleBar>
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <local:TitleBar></local:TitleBar>
+            <Grid Margin="0,20,0,0">
+                <Grid.Resources >
+                    <Style TargetType="Border" >
+                        <Setter Property="Padding" Value="5,5,5,5" />
+                    </Style>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0">
+                    <local:Swimlane State="New"></local:Swimlane>
+                </Border>
+                <Border Grid.Column="1">
+                    <local:Swimlane State="InProgress"></local:Swimlane>
+                </Border>
+                <Border Grid.Column="2">
+                    <local:Swimlane State="Done"></local:Swimlane>
+                </Border>
+            </Grid>
+            <Canvas>
+                <local:AddTodoItem></local:AddTodoItem>
+            </Canvas>
+        </StackPanel>
+    </Grid>
 </Page>
