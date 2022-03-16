@@ -18,10 +18,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)AddTodoItem.xaml.cs">
       <DependentUpon>AddTodoItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AddTodoItemDialog.xaml.cs">
+      <DependentUpon>AddTodoItemDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Domain\Todo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NewTodoItemViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Swimlane.xaml.cs">
       <DependentUpon>Swimlane.xaml</DependentUpon>
     </Compile>
@@ -34,6 +38,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)AddTodoItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)AddTodoItemDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

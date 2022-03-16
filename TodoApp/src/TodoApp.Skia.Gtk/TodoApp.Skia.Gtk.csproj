@@ -14,6 +14,7 @@
     <UpToDateCheckInput Include="..\TodoApp.Shared\**\*.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MADE.UI.Controls.Validator" Version="1.4.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="5.0.0" />
     <PackageReference Include="Uno.UI.Skia.Gtk" Version="4.1.8" />
