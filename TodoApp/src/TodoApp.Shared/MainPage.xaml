@@ -5,7 +5,6 @@
     xmlns:local="using:TodoApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -33,7 +32,7 @@
             </Border>
         </Grid>
         <RelativePanel Background="AntiqueWhite">
-            <local:AddTodoItem RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="-128,-128,0,0"/>
+            <local:AddTodoItemButton RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="-128,-128,0,0"/>
         </RelativePanel>
     </StackPanel>
 </Page>

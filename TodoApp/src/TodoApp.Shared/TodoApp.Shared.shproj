@@ -24,7 +24,6 @@
     <_Globbed_Content Remove="Assets\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <_Globbled_Page Remove="AddTodoItem.xaml" />
     <_Globbled_Page Remove="AddTodoItemDialog.xaml" />
     <_Globbled_Page Remove="Swimlane.xaml" />
   </ItemGroup>

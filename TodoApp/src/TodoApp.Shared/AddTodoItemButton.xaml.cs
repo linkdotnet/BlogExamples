@@ -3,9 +3,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace TodoApp
 {
-    public sealed partial class AddTodoItem : UserControl
+    public sealed partial class AddTodoItemButton : UserControl
     {
-        public AddTodoItem()
+        public AddTodoItemButton()
         {
             this.InitializeComponent();
         }
@@ -19,7 +19,6 @@ namespace TodoApp
 
         private void Dialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            var viewModel = sender.DataContext as object;
         }
     }
 }

@@ -7,7 +7,6 @@
     xmlns:controls="using:MADE.UI.Controls"
     Title="Add new todo item"
     PrimaryButtonText="Add"
-    PrimaryButtonCommand="{Binding }"
     IsPrimaryButtonEnabled="False"
     SecondaryButtonText="Cancel">
 
@@ -24,16 +23,23 @@
             <RowDefinition Height="10" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Title:" />
-        <TextBox Grid.Row="0" Grid.Column="2"/>
+        <controls:InputValidator Grid.Row="0" Grid.Column="2"
+                                 Input="{x:Bind titleTextBox.Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 Validators="{x:Bind viewModel.TitleValidators}">
+
+            <TextBox x:Name="titleTextBox" Text="{x:Bind viewModel.Title}"/>
+        </controls:InputValidator>
 
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Due Date:" />
         <DatePicker Grid.Row="2" Grid.Column="2"/>
 
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Descirption:" />
-        <controls:InputValidator Grid.Row="4" Grid.Column="2">
-            <TextBox AcceptsReturn="True" TextWrapping="Wrap"/>
+        <controls:InputValidator Grid.Row="4" Grid.Column="2"
+                                 Input="{x:Bind descriptionTextBox.Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 Validators="{x:Bind viewModel.DescriptionValidators}">
+            <TextBox x:Name="descriptionTextBox" AcceptsReturn="True" TextWrapping="Wrap" Text="{x:Bind viewModel.Description}"/>
         </controls:InputValidator>
     </Grid>
 </ContentDialog>

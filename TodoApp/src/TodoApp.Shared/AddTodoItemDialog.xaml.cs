@@ -10,6 +10,7 @@ namespace TodoApp
 		{
 			InitializeComponent();
 			DataContext = viewModel;
+			viewModel.PropertyChanged += (s, a) => IsPrimaryButtonEnabled = viewModel.IsViewModelValid;
 		}
 	}
 }

@@ -15,8 +15,8 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)AddTodoItem.xaml.cs">
-      <DependentUpon>AddTodoItem.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)AddTodoItemButton.xaml.cs">
+      <DependentUpon>AddTodoItemButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)AddTodoItemDialog.xaml.cs">
       <DependentUpon>AddTodoItemDialog.xaml</DependentUpon>
@@ -37,7 +37,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)AddTodoItem.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)AddTodoItemButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
