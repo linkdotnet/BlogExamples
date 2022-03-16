@@ -9,7 +9,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Button Width="64" Height="64" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BtnClick">
+    <Button Width="64" Height="64" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="OpenDialog">
         <Button.Background>
             <ImageBrush ImageSource="ms-appx:///Assets/AddTodoItem.png"/>
         </Button.Background>

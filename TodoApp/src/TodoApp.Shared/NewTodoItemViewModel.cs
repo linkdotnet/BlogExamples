@@ -75,8 +75,8 @@ namespace TodoApp
             }
         }
 
-        public ValidatorCollection TitleValidators { get; } = new ValidatorCollection() { new RequiredValidator() };
-        public ValidatorCollection DescriptionValidators { get; } = new ValidatorCollection() { new RequiredValidator() };
+        public ValidatorCollection TitleValidators { get; } = new ValidatorCollection() { new RequiredValidator(), new MinLengthValidator(4) };
+        public ValidatorCollection DescriptionValidators { get; } = new ValidatorCollection() { new RequiredValidator(), new MinLengthValidator(10) };
 
         private void ValidateTitle(object sender, InputValidatedEventArgs args)
         {

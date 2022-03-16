@@ -10,7 +10,7 @@ namespace TodoApp
             this.InitializeComponent();
         }
 
-        private void BtnClick(object sender, RoutedEventArgs args)
+        private void OpenDialog(object sender, RoutedEventArgs args)
         {
             var dialog = new AddTodoItemDialog();
             dialog.ShowAsync();
