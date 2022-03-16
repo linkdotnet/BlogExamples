@@ -35,7 +35,7 @@
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Due Date:" />
         <DatePicker Grid.Row="2" Grid.Column="2"/>
 
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Descirption:" />
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Description:" />
         <controls:InputValidator Grid.Row="4" Grid.Column="2"
                                  Input="{x:Bind descriptionTextBox.Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                  Validators="{x:Bind viewModel.DescriptionValidators}">
