@@ -13,12 +13,7 @@ namespace TodoApp
         private void BtnClick(object sender, RoutedEventArgs args)
         {
             var dialog = new AddTodoItemDialog();
-            dialog.PrimaryButtonClick += Dialog_PrimaryButtonClick;
             dialog.ShowAsync();
-        }
-
-        private void Dialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
         }
     }
 }
