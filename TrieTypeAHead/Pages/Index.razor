@@ -8,9 +8,11 @@
     <InputTypeAHead AllWords="_words" AutoCompleteCount="5"></InputTypeAHead>
 </div>
 @code {
-    private readonly string[] _words = new[] { "Cat", "Car", "Dog", "Day", "Hamster", "School", "Sand", "Tea", "Water",
-        "Cold", "Weather", "Blazor", "Dotnet", "CSharp", "Steven", "Giesel", "Example", "Blog", "Stamp", "Stencil" }
-        .OrderBy(w => w)
-        .ToArray();
+
+    private readonly string[] _words =
+    {
+        "Cat", "Car", "Dog", "Day", "Hamster", "School", "Sand", "Tea", "Water",
+        "Cold", "Weather", "Blazor", "Dotnet", "CSharp", "Steven", "Giesel", "Example", "Blog", "Stamp", "Stencil"
+    };
 
 }

@@ -1,36 +1,53 @@
 @using LinkDotNet.Blog.Web.Features.Components.Typeahead
 
+@* We are using Bootstrap 5 example here. I want my input and the suggestion directly under each other*@
 <div class="row">
+    @*
+    Every time the user inputs a text we update our suggestion
+    You could also add debouncing and stuff here
+    *@
     <input @oninput="UpdateAutoCompletion" value="@content"/>
+    @* Only show suggestions if we have at least one *@
     @if (similarWords.Any())
     {
+        @*
+        Not super sexy but it does what we want. We are using a select element
+        which shows all the words and we can change/click on it so that the
+        input element will change
+        *@
         <select size="@AutoCompleteCount" @onchange="UseSelectedWord">
-        @foreach (var similarWord in similarWords)
-        {
-            <option value="@similarWord">@similarWord</option>
-        }
+            @foreach (var similarWord in similarWords)
+            {
+                <option value="@similarWord">@similarWord</option>
+            }
         </select>
     }
 </div>
 @code {
+    // Let the parent tell which words we have to "index"
     [Parameter] public IEnumerable<string> AllWords { get; set; }
+    // The maximum amount of suggestion we will give
     [Parameter] public int AutoCompleteCount { get; set; } = 10;
 
     private readonly Trie trie = new();
     private string content = string.Empty;
     private List<string> similarWords = new();
 
-    protected override void OnParametersSet()
+    // Create the Trie once
+    // You could also use OnParameterSet and re-create the trie when the parameters change
+    protected override void OnInitialized()
     {
-        foreach (var word in AllWords)
+        // Lets order the words alphabetically - so it is easier for the user to select her/his word
+        foreach (var word in AllWords.OrderBy(w => w))
         {
             trie.Add(word);
         }
     }
 
-    private void UpdateAutoCompletion(ChangeEventArgs obj)
+    private void UpdateAutoCompletion(ChangeEventArgs inputEventArgs)
     {
-        content = obj.Value.ToString();
+        content = inputEventArgs.Value.ToString();
+        // Get all words from our Trie which share the prefix (at most AutoCompleteCount)
         similarWords = trie.GetWordsWithPrefix(content).Take(AutoCompleteCount).ToList();
     }
 
