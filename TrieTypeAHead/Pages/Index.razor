@@ -1,0 +1,16 @@
+@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Enter a word (start with captial letter)</h1>
+
+<div class="col-2 ms-5">
+    <InputTypeAHead AllWords="_words" AutoCompleteCount="5"></InputTypeAHead>
+</div>
+@code {
+    private readonly string[] _words = new[] { "Cat", "Car", "Dog", "Day", "Hamster", "School", "Sand", "Tea", "Water",
+        "Cold", "Weather", "Blazor", "Dotnet", "CSharp", "Steven", "Giesel", "Example", "Blog", "Stamp", "Stencil" }
+        .OrderBy(w => w)
+        .ToArray();
+
+}

@@ -1,0 +1,42 @@
+@using LinkDotNet.Blog.Web.Features.Components.Typeahead
+
+<div class="row">
+    <input @oninput="UpdateAutoCompletion" value="@content"/>
+    @if (similarWords.Any())
+    {
+        <select size="@AutoCompleteCount" @onchange="UseSelectedWord">
+        @foreach (var similarWord in similarWords)
+        {
+            <option value="@similarWord">@similarWord</option>
+        }
+        </select>
+    }
+</div>
+@code {
+    [Parameter] public IEnumerable<string> AllWords { get; set; }
+    [Parameter] public int AutoCompleteCount { get; set; } = 10;
+
+    private readonly Trie trie = new();
+    private string content = string.Empty;
+    private List<string> similarWords = new();
+
+    protected override void OnParametersSet()
+    {
+        foreach (var word in AllWords)
+        {
+            trie.Add(word);
+        }
+    }
+
+    private void UpdateAutoCompletion(ChangeEventArgs obj)
+    {
+        content = obj.Value.ToString();
+        similarWords = trie.GetWordsWithPrefix(content).Take(AutoCompleteCount).ToList();
+    }
+
+    private void UseSelectedWord(ChangeEventArgs obj)
+    {
+        content = obj.Value.ToString();
+        similarWords.Clear();
+    }
+}
