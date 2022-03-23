@@ -9,7 +9,7 @@ namespace TodoApp
     {
         private string title;
         private string description;
-        private DateTimeOffset dueDate;
+        private DateTimeOffset dueDate = DateTimeOffset.Now;
         private bool isTitleValid;
         private bool isDescriptionValid;
         private bool isViewModelValid;

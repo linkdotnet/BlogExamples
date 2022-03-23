@@ -13,6 +13,9 @@
 			-->
       <Version>6.2.11</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI">
+      <Version>7.1.1</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml" Version="2.6.2" />
     <PackageReference Include="Refractored.MvvmHelpers">
       <Version>1.6.2</Version>

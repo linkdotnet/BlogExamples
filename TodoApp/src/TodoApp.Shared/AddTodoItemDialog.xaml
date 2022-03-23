@@ -29,17 +29,17 @@
                                  Input="{x:Bind titleTextBox.Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                  Validators="{x:Bind viewModel.TitleValidators}">
 
-            <TextBox x:Name="titleTextBox" Text="{x:Bind viewModel.Title}"/>
+            <TextBox x:Name="titleTextBox" Text="{x:Bind viewModel.Title, Mode=TwoWay}"/>
         </controls:InputValidator>
 
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Due Date:" />
-        <DatePicker Grid.Row="2" Grid.Column="2"/>
+        <DatePicker Grid.Row="2" Grid.Column="2" Date="{x:Bind viewModel.DueDate, Mode=TwoWay}"/>
 
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Description:" />
         <controls:InputValidator Grid.Row="4" Grid.Column="2"
                                  Input="{x:Bind descriptionTextBox.Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                  Validators="{x:Bind viewModel.DescriptionValidators}">
-            <TextBox x:Name="descriptionTextBox" AcceptsReturn="True" TextWrapping="Wrap" Text="{x:Bind viewModel.Description}"/>
+            <TextBox x:Name="descriptionTextBox" AcceptsReturn="True" TextWrapping="Wrap" Text="{x:Bind viewModel.Description, Mode=TwoWay}"/>
         </controls:InputValidator>
     </Grid>
 </ContentDialog>

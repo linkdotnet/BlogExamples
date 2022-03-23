@@ -9,10 +9,19 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <StackPanel MinWidth="200" MinHeight="500" BorderBrush="DarkOliveGreen" BorderThickness="2">
+    <StackPanel MinWidth="200" MinHeight="400" BorderBrush="DarkOliveGreen" BorderThickness="2">
         <TextBlock Text="{x:Bind State}" HorizontalAlignment="Center"></TextBlock>
-        <ListView>
-            <!-- Here goes our todo item content -->
+        <ListView x:Name="itemListView" HorizontalContentAlignment="Stretch">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:TodoItem></local:TodoItem>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </StackPanel>
 </UserControl>

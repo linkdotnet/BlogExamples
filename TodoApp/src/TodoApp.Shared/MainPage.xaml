@@ -7,6 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <local:MainPageViewModel></local:MainPageViewModel>
+    </Page.DataContext>
 
     <StackPanel Grid.Row="0" x:Name="swimlane">
         <local:TitleBar></local:TitleBar>
@@ -32,7 +35,7 @@
             </Border>
         </Grid>
         <RelativePanel Background="AntiqueWhite">
-            <local:AddTodoItemButton RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="-128,-128,0,0"/>
+            <local:AddTodoItemButton RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" Margin="-128,-128,0,0" x:Name="addItemButton"/>
         </RelativePanel>
     </StackPanel>
 </Page>

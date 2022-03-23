@@ -16,8 +16,11 @@
     <_Globbed_Compile Remove="Command.cs" />
     <_Globbed_Compile Remove="Domain\Todo.cs" />
     <_Globbed_Compile Remove="Greeting.xaml.cs" />
+    <_Globbed_Compile Remove="MainPageViewModel.cs" />
     <_Globbed_Compile Remove="NewTodoItemViewModel.cs" />
     <_Globbed_Compile Remove="Swimlane.xaml.cs" />
+    <_Globbed_Compile Remove="SwimlaneViewModel.cs" />
+    <_Globbed_Compile Remove="TodoItem.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
     <_Globbed_Content Remove="Assets\AddTodoItem.png" />
@@ -26,5 +29,6 @@
   <ItemGroup>
     <_Globbled_Page Remove="AddTodoItemDialog.xaml" />
     <_Globbled_Page Remove="Swimlane.xaml" />
+    <_Globbled_Page Remove="TodoItem.xaml" />
   </ItemGroup>
 </Project>
