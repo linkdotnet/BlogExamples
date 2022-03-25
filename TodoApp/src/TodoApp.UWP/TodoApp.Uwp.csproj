@@ -17,6 +17,9 @@
       <Version>7.1.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml" Version="2.6.2" />
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Refractored.MvvmHelpers">
       <Version>1.6.2</Version>
     </PackageReference>

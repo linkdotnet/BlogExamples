@@ -17,6 +17,7 @@
     <PackageReference Include="MADE.UI.Controls.Validator" Version="1.4.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI" Version="7.1.11" />
     <PackageReference Include="Uno.UI.Skia.Gtk" Version="4.1.8" />
