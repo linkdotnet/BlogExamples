@@ -19,8 +19,12 @@
         
         <TextBlock Text="{x:Bind State}" HorizontalAlignment="Center" Grid.Row="0"></TextBlock>
         <ListView x:Name="itemListView" Background="Beige" Grid.Row="2"
-                  AllowDrop="True" CanDragItems="True" CanReorderItems="True" 
-                  Drop="DropItem" DragOver="SetDragOverIcon" DragItemsStarting="SetDragItem" DragItemsCompleted="UpdateList">
+                  AllowDrop="True"
+                  CanDragItems="True"
+                  DragOver="SetDragOverIcon"
+                  DragItemsStarting="SetDragItem"
+                  Drop="DropItem"
+                  DragItemsCompleted="UpdateList">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
