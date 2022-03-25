@@ -10,7 +10,7 @@
     d:DataContext="{d:DesignInstance Type=domain:Todo}"
     d:DesignHeight="300"
     d:DesignWidth="400">
-    <StackPanel>
+    <StackPanel> 
         <TextBlock Text="{Binding Path=Title}" TextAlignment="Center" FontWeight="Bold"></TextBlock>
         <TextBlock Text="{Binding Path=Description}" Margin="0,10,0,0"></TextBlock>
         <TextBlock Text="{Binding Path=DueDate}" Margin="0,10,0,0"></TextBlock>
