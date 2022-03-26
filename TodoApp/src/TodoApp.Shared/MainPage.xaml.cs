@@ -35,7 +35,7 @@ namespace TodoApp
                 var viewmodel = JsonConvert.DeserializeObject<MainPageViewModel>(text);
                 if (viewmodel?.TodoItems.Any() == true)
                 {
-                    ((MainPageViewModel)DataContext).TodoItems.AddRange(viewmodel.TodoItems);
+                    DataContext = viewmodel;
                 }
             }            
         }
