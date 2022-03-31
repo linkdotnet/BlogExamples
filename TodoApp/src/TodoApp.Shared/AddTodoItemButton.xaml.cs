@@ -14,11 +14,11 @@ namespace TodoApp
 
         public event EventHandler<Todo> TodoItemCreated;
 
-        private void OpenDialog(object sender, RoutedEventArgs args)
+        private async void OpenDialog(object sender, RoutedEventArgs args)
         {
             var dialog = new AddTodoItemDialog();
             dialog.PrimaryButtonClick += (s, a) => NewTodoItemCreated((NewTodoItemViewModel)dialog.DataContext);
-            dialog.ShowAsync();
+            await dialog.ShowAsync();
         }
 
         private void NewTodoItemCreated(NewTodoItemViewModel viewModel)

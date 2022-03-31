@@ -1,0 +1,44 @@
+﻿<h3>Roles:</h3>
+<ul>
+    @foreach (var role in _roles)
+    {
+        <li>@role</li>
+    }
+</ul>
+
+@code {
+
+    [CascadingParameter]
+    public LoadingConfiguration LoadingConfiguration { get; set; } = default!;
+
+    private string[] _roles = Array.Empty<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        LoadingConfiguration.TotalSteps = 3;
+        LoadingConfiguration.Title = "Getting Data";
+        LoadingConfiguration.IsLoading = true;
+
+        await Task.Delay(1000);
+        _roles = new[] { "Admin", "Co-Admin", "User" };
+
+        LoadingConfiguration.CurrentStep++;
+        LoadingConfiguration.Title = "Filter Data";
+
+        await Task.Delay(1000);
+        _roles = _roles.Where(s => s.Contains("Admin")).ToArray();
+
+        LoadingConfiguration.CurrentStep++;
+        LoadingConfiguration.Title = "Another step to prepare the matrix...";
+
+        await Task.Delay(1000);
+
+        LoadingConfiguration.CurrentStep++;
+        LoadingConfiguration.Title = "Almost there...";
+
+        await Task.Delay(1000);
+
+        LoadingConfiguration.IsLoading = false;
+    }
+
+}

@@ -1,0 +1,33 @@
+﻿<div style="display: @DisplayClassLoading">
+    <p>@LoadingConfiguration.Title</p>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped" role="progressbar"
+             style="width: @LoadingConfiguration.GetPercentage()%"
+             aria-valuenow="@LoadingConfiguration.CurrentStep"
+             aria-valuemin="0"
+             aria-valuemax="@LoadingConfiguration.TotalSteps"></div>
+    </div>
+</div>
+
+<div style="display: @DisplayClassChildComponent">
+    <CascadingValue Value="@LoadingConfiguration">
+        @ChildComponent
+    </CascadingValue>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildComponent { get; set; } = default!;
+
+    private LoadingConfiguration LoadingConfiguration { get; set; } = new();
+
+    private string DisplayClassLoading => LoadingConfiguration.IsLoading ? "initial" : "none";
+    private string DisplayClassChildComponent => LoadingConfiguration.IsLoading ? "none" : "initial";
+
+    protected override void OnParametersSet()
+    {
+        LoadingConfiguration.PropertyChanged += (_, _) => StateHasChanged();
+    }
+
+}
