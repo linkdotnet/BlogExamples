@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                        | Publish Date |
 | ------------------------------------------------------------------------------- | ------------ |
+| [Reusable loading Bar Component in Blazor](BlazorLoadingComponent/)             | 31.03.2022   |
 | [TypeAHead with a Trie](TrieTypeAHead/)                                         | 20.03.2022   |
 | [UNO Platform - Build a Todo App](TodoApp/)                                     | 10.03.2022   |
 | [Using SSE in C# on the example of the sum of a list](ArraySumPerformanceSIMD/) | 07.03.2022   |
