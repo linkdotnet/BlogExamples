@@ -1,9 +1,7 @@
 ﻿using System.Buffers;
-using System.Runtime.CompilerServices;
 
 namespace LinkDotNet;
 
-[SkipLocalsInit]
 public ref struct ValueStringBuilder
 {
     private int _bufferPosition;
