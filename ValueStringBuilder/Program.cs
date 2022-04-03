@@ -33,7 +33,7 @@ public class Benchi
         fast.AppendLine("Here some other text");
         fast.AppendLine("And again some other text as well for good measure");
         fast.AppendLine("You are still here?");
-        fast.AppendLine("Hmmm.")
+        fast.AppendLine("Hmmm.");
         fast.AppendLine("I wish you a very nice day and all the best.");
         fast.AppendLine("Sincerly Steven");
         return fast.ToString();
