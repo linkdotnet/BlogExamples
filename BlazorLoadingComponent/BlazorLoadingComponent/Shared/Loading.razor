@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<div style="display: @DisplayClassChildComponent">
+<div style="display: @DisplayClassChildContent">
     <CascadingValue Value="@LoadingConfiguration">
         @ChildContent
     </CascadingValue>
@@ -23,7 +23,7 @@
     private LoadingConfiguration LoadingConfiguration { get; set; } = new();
 
     private string DisplayClassLoading => LoadingConfiguration.IsLoading ? "initial" : "none";
-    private string DisplayClassChildComponent => LoadingConfiguration.IsLoading ? "none" : "initial";
+    private string DisplayClassChildContent => LoadingConfiguration.IsLoading ? "none" : "initial";
 
     protected override void OnParametersSet()
     {
