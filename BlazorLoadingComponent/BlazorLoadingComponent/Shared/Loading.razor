@@ -12,13 +12,13 @@
 
 <div style="display: @DisplayClassChildComponent">
     <CascadingValue Value="@LoadingConfiguration">
-        @ChildComponent
+        @ChildContent
     </CascadingValue>
 </div>
 
 @code {
     [Parameter]
-    public RenderFragment ChildComponent { get; set; } = default!;
+    public RenderFragment ChildContent { get; set; } = default!;
 
     private LoadingConfiguration LoadingConfiguration { get; set; } = new();
 
