@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayInitializePerformance", "ArrayInitializePerformance.csproj", "{FB7185E1-F5A9-4A29-A28A-C78D54963B61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB7185E1-F5A9-4A29-A28A-C78D54963B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB7185E1-F5A9-4A29-A28A-C78D54963B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB7185E1-F5A9-4A29-A28A-C78D54963B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB7185E1-F5A9-4A29-A28A-C78D54963B61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
