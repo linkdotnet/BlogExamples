@@ -1,0 +1,20 @@
+@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<button class="btn btn-primary" @onclick="() => ModalDialog.Open()">Click me!</button>
+
+<ModalDialog @ref="@ModalDialog" Title="Hello World">
+    <div class="row">
+        <h3>Lorem Ipsum</h3>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel ultricies sapien. Duis nec nunc erat. Vivamus eget sem tristique, lacinia mi id, cursus eros.</p>
+        <button class="btn btn-primary"  @onclick="() => ModalDialog.Close()">Close</button>
+    </div>
+</ModalDialog>
+
+@code {
+    private ModalDialog ModalDialog { get; set; }
+}
