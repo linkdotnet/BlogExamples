@@ -1,4 +1,4 @@
-# 4 Different ways of creating an array
+# Modal Dialog component with Bootstrap in Blazor
 
 This short blog post will show you how to utilize **Bootstrap** to create a small and reuseable `ModalDialogComponent`.
 
