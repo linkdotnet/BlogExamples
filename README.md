@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                 | Publish Date |
 | ---------------------------------------------------------------------------------------- | ------------ |
+| [Tail-Recursion - Explained with the Fibonacci series](TailRecursion/)                   | 13.05.2022   |
 | [Modal Dialog component with Bootstrap in Blazor](ModalDialogComponent/)                 | 19.04.2022   |
 | [4 Different ways of creating an array](ArrayInitializePerformance/)                     | 14.04.2022   |
 | [Create a low allocation and faster StringBuilder - Span in Action](ValueStringBuilder/) | 03.04.2022   |
