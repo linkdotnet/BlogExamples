@@ -4,8 +4,7 @@ using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 
 BenchmarkRunner.Run<EmptyFinalizer>();
-GC.WaitForPendingFinalizers();
-GC.Collect();
+
 [MemoryDiagnoser]
 public class EmptyFinalizer
 {
