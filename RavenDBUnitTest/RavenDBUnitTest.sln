@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RavenDBUnitTest", "RavenDBUnitTest\RavenDBUnitTest.csproj", "{92EA3175-2BEE-4BF2-8995-5C44D591A549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RavenDBUnitTest.Tests", "RavenDBUnitTest.Tests\RavenDBUnitTest.Tests.csproj", "{987974CC-7031-4DFD-ADC9-23EE2C461800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92EA3175-2BEE-4BF2-8995-5C44D591A549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92EA3175-2BEE-4BF2-8995-5C44D591A549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92EA3175-2BEE-4BF2-8995-5C44D591A549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92EA3175-2BEE-4BF2-8995-5C44D591A549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987974CC-7031-4DFD-ADC9-23EE2C461800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987974CC-7031-4DFD-ADC9-23EE2C461800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987974CC-7031-4DFD-ADC9-23EE2C461800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987974CC-7031-4DFD-ADC9-23EE2C461800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
