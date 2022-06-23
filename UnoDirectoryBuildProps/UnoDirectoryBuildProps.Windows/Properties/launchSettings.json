@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"UnoDirectoryBuildProps.Windows (Package)": {
+			"commandName": "MsixPackage"
+		},
+		"UnoDirectoryBuildProps.Windows (Unpackaged)": {
+			"commandName": "Project"
+		}
+	}
+}

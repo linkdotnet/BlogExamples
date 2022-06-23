@@ -1,0 +1,13 @@
+{
+  "solution": {
+    "path": "UnoDirectoryBuildProps.sln",
+    "projects": [
+		"UnoDirectoryBuildProps.Shared\\UnoDirectoryBuildProps.Shared.shproj",
+
+
+		"UnoDirectoryBuildProps.Wasm\\UnoDirectoryBuildProps.Wasm.csproj",
+
+		"UnoDirectoryBuildProps.Skia.Gtk\\UnoDirectoryBuildProps.Skia.Gtk.csproj",
+    ]
+  }
+}
