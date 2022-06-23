@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                 | Publish Date |
 | ---------------------------------------------------------------------------------------- | ------------ |
+| [Central nuget store for your UNO Platform App](UnoDirectoryBuildProps/)                 | 23.06.2022   |
 | [ObjectPool - Rent and return some instances](ObjectPool/)                               | 02.06.2022   |
 | [Blazor with an RSS Feed](BlazorRSSFeed/)                                                | 30.05.2022   |
 | [How to unit test a RavenDB](RavenDBUnitTest/)                                           | 25.05.2022   |
