@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>BlazorClientLoadingScreen</title>
+  <base href="/"/>
+  <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/app.css" rel="stylesheet"/>
+  <link href="BlazorClientLoadingScreen.styles.css" rel="stylesheet"/>
+</head>
+
+<body>
+<!-- Everything under app will be shown before our content is loaded -->
+<!-- Once the application is loaded, it will remove that part-->
+<div id="app">
+  <div class="position-relative mt-5">
+    <div class="position-absolute top-50 start-50 translate-middle w-25 text-center">
+      <div class="loading">
+        <div class="bounceball"></div>
+        <div class="text">Loading</div>
+<!--                  Make a progress bar so the user see if someone is happening-->
+        <div class="progress mt-2" style="height: 2em;">
+          <div id="progressbar" class="progress-bar progress-bar-striped progress-bar-animated"
+               style="width: 0; background-color: #204066;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="blazor-error-ui">
+  An unhandled error has occurred.
+  <a href="" class="reload">Reload</a>
+  <a class="dismiss">🗙</a>
+</div>
+<script src="_framework/blazor.webassembly.js" autostart="false"></script>
+<script>
+  function StartBlazor() {
+    let loadedCount = 0;
+    const resourcesToLoad = [];
+    Blazor.start({
+      // This function gets called by the Blazor pipeline
+      loadBootResource:
+              function (type, filename, defaultUri, integrity) {
+                if (type === "dotnetjs")
+                  return defaultUri;
+
+                const fetchResources = fetch(defaultUri, {
+                  cache: 'no-cache',
+                  integrity: integrity
+                });
+
+                // We "collect" all resources to know how many there are
+                // As "fetchResources" is a promise this will be done asynchronously
+                resourcesToLoad.push(fetchResources);
+
+                // That promise is fulfilled once one resource is done fetching
+                // When this happens we 
+                fetchResources.then((_) => {
+                  // When fetching is done, indicate this in our loading bar
+                  loadedCount++;
+                  const totalCount = resourcesToLoad.length;
+                  const percentLoaded = 100 * loadedCount / totalCount;
+                  const progressbar = document.getElementById('progressbar');
+                  progressbar.style.width = percentLoaded + '%';
+                });
+
+                return fetchResources;
+              }
+    });
+  }
+
+  // Invoke the pipeline
+  StartBlazor();
+</script>
+</body>
+
+</html>
