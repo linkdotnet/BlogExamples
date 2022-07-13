@@ -39,36 +39,35 @@
 <script>
   function StartBlazor() {
     let loadedCount = 0;
-    const resourcesToLoad = [];
+    let allRessources = 0;
     Blazor.start({
       // This function gets called by the Blazor pipeline
       loadBootResource:
-              function (type, filename, defaultUri, integrity) {
-                if (type === "dotnetjs")
-                  return defaultUri;
+        function (type, filename, defaultUri, integrity) {
+          if (type === "dotnetjs")
+            return defaultUri;
 
-                const fetchResources = fetch(defaultUri, {
-                  cache: 'no-cache',
-                  integrity: integrity
-                });
+          // As "fetchResources" is a promise we don't block
+          const fetchResources = fetch(defaultUri, {
+            cache: 'no-cache',
+            integrity: integrity
+          });
+          
+          // Add one to the total amount of stuff we have to fetch
+          allRessources++;
 
-                // We "collect" all resources to know how many there are
-                // As "fetchResources" is a promise this will be done asynchronously
-                resourcesToLoad.push(fetchResources);
+          // That promise is fulfilled once one resource is done fetching
+          // When this happens we update the progress bar
+          fetchResources.then((_) => {
+            // When fetching is done, indicate this in our loading bar
+            loadedCount++;
+            const percentLoaded = 100 * loadedCount / allRessources;
+            const progressbar = document.getElementById('progressbar');
+            progressbar.style.width = percentLoaded + '%';
+          });
 
-                // That promise is fulfilled once one resource is done fetching
-                // When this happens we 
-                fetchResources.then((_) => {
-                  // When fetching is done, indicate this in our loading bar
-                  loadedCount++;
-                  const totalCount = resourcesToLoad.length;
-                  const percentLoaded = 100 * loadedCount / totalCount;
-                  const progressbar = document.getElementById('progressbar');
-                  progressbar.style.width = percentLoaded + '%';
-                });
-
-                return fetchResources;
-              }
+          return fetchResources;
+        }
     });
   }
 
