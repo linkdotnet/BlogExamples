@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                 | Publish Date |
 | ---------------------------------------------------------------------------------------- | ------------ |
+| [Mediator Pattern - CQRS with MediatR](MediatorPattern/)                                 | 06.08.2022   |
 | [Logging Source Code Generators](LoggingSourceCodeGenerator/)                            | 27.07.2022   | 
 | [Blazor Client - Loading Screen](BlazorClientLoadingScreen/)                             | 12.07.2022   |
 | [Central nuget store for your UNO Platform App](UnoDirectoryBuildProps/)                 | 23.06.2022   |

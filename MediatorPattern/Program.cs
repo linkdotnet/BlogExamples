@@ -21,8 +21,15 @@ await serviceProvider.GetRequiredService<Execution>().RunAsync();
 ServiceProvider CreateServiceProvider()
 {
     var collection = new ServiceCollection();
+    // This will execute our main logic
     collection.AddScoped<Execution>();
+    
+    // This comes from the MediatR package.
+    // It looks for all commands, queries and handlers and registers
+    // them in the container
     collection.AddMediatR(typeof(Program).Assembly);
+    
+    // Our repository
     collection.AddScoped<UserRepository>();
     return collection.BuildServiceProvider();
 }
