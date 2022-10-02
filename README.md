@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                 | Publish Date |
 | ---------------------------------------------------------------------------------------- | ------------ |
+| [Introduction to WebApplicationFactory](WebAppFactory/)                                  | 02.10.2022   |
 | [EF7 - Bulk updates and Bulk deletes](EF7Bulk/)                                          | 21.08.2022   |
 | [Mediator Pattern - CQRS with MediatR](MediatorPattern/)                                 | 06.08.2022   |
 | [Logging Source Code Generators](LoggingSourceCodeGenerator/)                            | 27.07.2022   |
