@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                 | Publish Date |
 | ---------------------------------------------------------------------------------------- | ------------ |
+| [LiteDB - A .NET embedded NoSQL database](LiteDatabase/)                                 | 19.10.2022   |
 | [Cursed C# - Doing shenanigans in C#](CursedCSharp/)                                     | 15.10.2022   |
 | [Introduction to WebApplicationFactory](WebAppFactory/)                                  | 02.10.2022   |
 | [EF7 - Bulk updates and Bulk deletes](EF7Bulk/)                                          | 21.08.2022   |
