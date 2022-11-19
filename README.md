@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                 | Publish Date |
 | ---------------------------------------------------------------------------------------- | ------------ |
+| [Anonymous test data with AutoFixture](AutoFixtureXUnit/)                                | 19.11.2022   |
 | [LiteDB - A .NET embedded NoSQL database](LiteDatabase/)                                 | 19.10.2022   |
 | [Cursed C# - Doing shenanigans in C#](CursedCSharp/)                                     | 15.10.2022   |
 | [Introduction to WebApplicationFactory](WebAppFactory/)                                  | 02.10.2022   |
