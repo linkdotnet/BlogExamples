@@ -1,4 +1,5 @@
 using System.Net.Http.Json;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
@@ -10,6 +11,10 @@ public class FeatureOneTests : IClassFixture<WebApplicationFactory<Program>>
 
     public FeatureOneTests(WebApplicationFactory<Program> factory)
     {
+        factory.WithWebHostBuilder(builder =>
+        {
+            builder.UseEnvironment("Development");
+        });
         client = factory.CreateClient();
     }
 

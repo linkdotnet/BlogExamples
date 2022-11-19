@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoFixtureXUnit", "AutoFixtureXUnit.csproj", "{1657D714-BBF6-466C-83D1-9040C130634F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1657D714-BBF6-466C-83D1-9040C130634F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1657D714-BBF6-466C-83D1-9040C130634F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1657D714-BBF6-466C-83D1-9040C130634F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1657D714-BBF6-466C-83D1-9040C130634F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
