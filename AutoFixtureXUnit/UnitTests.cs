@@ -9,11 +9,7 @@ public class UnitTest1
     [AutoData]
     public void TestOne(string name)
     {
-        var sut = new MyFooService();
 
-        var result = sut.MyCall(name);
-
-        Assert.NotNull(result);
     }
 
     [Theory]
