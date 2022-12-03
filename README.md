@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                 | Publish Date |
 | ---------------------------------------------------------------------------------------- | ------------ |
+| [How to enumerate through a StringBuilder](EnumerateStringBuilder/)                      | 03.12.2022   |
 | [Frozen collections in .NET 8](FrozenSetBenchmark/)                                      | 24.11.2022   |
 | ["Use always a StringBuilder" - Internet myths](StringBuilderPerformance/)               | 20.11.2022   |
 | [Anonymous test data with AutoFixture](AutoFixtureXUnit/)                                | 19.11.2022   |
