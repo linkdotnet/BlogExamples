@@ -21,7 +21,7 @@ public class Multiplier : IMultiplier
 
         var result = 0;
         for (var i = 0; i < Math.Abs(b); i++)
-            result += a;
+            result = _calculator.Add(result, a);
 
         return Math.Sign(b) == 1 ? result : -result;
     }
