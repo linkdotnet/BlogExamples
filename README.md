@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                 | Publish Date |
 | ---------------------------------------------------------------------------------------- | ------------ |
+| [Give your strings context with StringSyntaxAttribute](StringHightlighting/)             | 01.01.2023   |
 | [Simple DI - Container](DIContainer/)                                                    | 13.12.2022   |
 | [How to enumerate through a StringBuilder](EnumerateStringBuilder/)                      | 03.12.2022   |
 | [Frozen collections in .NET 8](FrozenSetBenchmark/)                                      | 24.11.2022   |
