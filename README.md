@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                 | Publish Date |
 | ---------------------------------------------------------------------------------------- | ------------ |
+| [Easy Pagintion for Entity Framework in 3 steps](PaginationEF/)                          | 09.01.2023   |
 | [Give your strings context with StringSyntaxAttribute](StringHightlighting/)             | 01.01.2023   |
 | [Simple DI - Container](DIContainer/)                                                    | 13.12.2022   |
 | [How to enumerate through a StringBuilder](EnumerateStringBuilder/)                      | 03.12.2022   |
