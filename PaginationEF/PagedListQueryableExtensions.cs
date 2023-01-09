@@ -9,7 +9,7 @@ public static class PagedListQueryableExtensions
         var count = await source.CountAsync(token);
         if (count > 0)
         {
-            var items = source
+            var items = await source
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync(token);
