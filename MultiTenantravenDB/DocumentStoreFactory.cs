@@ -8,18 +8,18 @@ public interface IDocumentStoreFactory
 
 public class DocumentStoreFactory : IDocumentStoreFactory
 {
-    private readonly ConcurrentDictionary<string, IDocumentStore> _stores;
+    private readonly ConcurrentDictionary<string, Lazy<IDocumentStore>> _stores;
 
     public DocumentStoreFactory()
     {
-        _stores = new ConcurrentDictionary<string, IDocumentStore>();
+        _stores = new ConcurrentDictionary<string, Lazy<IDocumentStore>>();
     }
 
     public IDocumentStore GetStore(string tenantId)
     {
-        if (_stores.TryGetValue(tenantId, out IDocumentStore value))
+        if (_stores.TryGetValue(tenantId, out var value))
         {
-            return value;
+            return value.Value;
         }
 
         var store = new DocumentStore
@@ -30,7 +30,7 @@ public class DocumentStoreFactory : IDocumentStoreFactory
 
         store.Initialize();
 
-        _stores[tenantId] = store;
+        _stores[tenantId] = new Lazy<IDocumentStore>(store);
 
         return store;
     }
