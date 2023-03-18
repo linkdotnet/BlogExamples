@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [Write your own AutoMapper in C#](AutoMapper/)                                                                 | 18.03.2023   |
 | [How to write your own cron Job scheduler in ASP.NET Core (like Quartz, Hangfire, ...)](CronBackgroundWorker/) | 09.03.2023   |
 | [Performance (ReadOnly)List vs Immutable collection types](ImmutablePerformance/)                              | 26.02.2023   |
 | [Multi-Tenancy with RavenDB and ASP.NET Core](MultiTenantRavenDB/)                                             | 05.02.2023   |
