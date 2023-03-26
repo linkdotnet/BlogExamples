@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorToolTip", "BlazorToolTip.csproj", "{8E181C8C-271F-4789-896F-859EB32D2957}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E181C8C-271F-4789-896F-859EB32D2957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E181C8C-271F-4789-896F-859EB32D2957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E181C8C-271F-4789-896F-859EB32D2957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E181C8C-271F-4789-896F-859EB32D2957}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
