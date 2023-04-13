@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Text;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Jobs;
@@ -14,6 +15,9 @@ public class Benchmarks
     private readonly List<int> _numbers = Enumerable.Range(0, 10000).Select(s => Random.Shared.Next()).ToList();
     private readonly string _text1 = "Hello woRld! ThIs is a test.It CoUlD be a lot longer, but it'S not. Or is it?";
     private readonly string _text2 = "Hello world! This is a test.it could be a lot longer, but it's not. Or is it?";
+
+    [Benchmark]
+    public string ReplaceStringBuilder() => new StringBuilder(_text1).Replace("Hello", "Goodbye").ToString();
 
     [Benchmark]
     public bool EqualsOrdinalIgnoreCase() => _text1.Equals(_text2, StringComparison.OrdinalIgnoreCase);
