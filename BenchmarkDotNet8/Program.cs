@@ -9,6 +9,7 @@ BenchmarkRunner.Run<Benchmarks>();
 
 [SimpleJob(RuntimeMoniker.Net70, baseline: true)]
 [SimpleJob(RuntimeMoniker.Net80)]
+[SimpleJob(RuntimeMoniker.Net60)]
 [HideColumns(Column.Job, Column.RatioSD)]
 public class Benchmarks
 {
@@ -62,4 +63,29 @@ public class Benchmarks
 
     [Benchmark]
     public string[] EnumGetNames() => Enum.GetNames<DayOfWeek>();
+
+    [Benchmark]
+    public List<int> ListAdd1000()
+    {
+        var list = new List<int>();
+        for (var i = 0; i < 1000; i++)
+        {
+            list.Add(i);
+        }
+
+        return list;
+    }
+
+    [Benchmark]
+    public int ListLookup()
+    {
+        var entriesFound = 0;
+        for (var i = 0; i < 100; i++)
+        {
+            if (_numbers.Contains(i))
+                entriesFound++;
+        }
+
+        return entriesFound;
+    }
 }
