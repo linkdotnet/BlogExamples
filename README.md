@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [Verifying your DI Container](ServiceCollectionVerify/)                                                        | 30.04.2023   |
 | [.NET 8 Performance Edition](BenchmarkDotNet8/)                                                                | 12.04.2023   |
 | [Creating a ToolTip Component in Blazor](BlazorToolTip/)                                                       | 31.03.2023   |
 | [C# Source Generators: How to get build information?](BuildInformation/)                                       | 26.03.2023   |
