@@ -25,16 +25,16 @@ public static class ServiceCollectionExtensions
 {
     public static void Verify(this IServiceCollection services)
     {
-var result = new VerifyResult();
-using var serviceProvider = services.BuildServiceProvider();
+        var result = new VerifyResult();
+        using var serviceProvider = services.BuildServiceProvider();
 
-result.Errors.AddRange(CheckServicesCanBeResolved(serviceProvider, services));
-result.Errors.AddRange(CheckForCaptiveDependencies(services));
+        result.Errors.AddRange(CheckServicesCanBeResolved(serviceProvider, services));
+        result.Errors.AddRange(CheckForCaptiveDependencies(services));
 
-if (!result.IsValid)
-{
-    throw new InvalidOperationException(result.ToString());
-}
+        if (!result.IsValid)
+        {
+            throw new InvalidOperationException(result.ToString());
+        }
     }
 
     private static List<string> CheckServicesCanBeResolved(IServiceProvider serviceProvider, IServiceCollection services)
@@ -55,25 +55,25 @@ if (!result.IsValid)
         return unresolvedTypes;
     }
 
-private static IEnumerable<string> CheckForCaptiveDependencies(IServiceCollection services)
-{
-    var singletonServices = services
-        .Where(descriptor => descriptor.Lifetime == ServiceLifetime.Singleton)
-        .Select(descriptor => descriptor.ServiceType);
-
-    foreach (var singletonService in singletonServices)
+    private static IEnumerable<string> CheckForCaptiveDependencies(IServiceCollection services)
     {
-        var captiveScopedServices = singletonService
-            .GetConstructors()
-            .SelectMany(property => property.GetParameters())
-            .Where(propertyType => services.Any(descriptor => descriptor.ServiceType == propertyType.ParameterType
-                                                              && descriptor.Lifetime == ServiceLifetime.Scoped
-                                                              || descriptor.Lifetime == ServiceLifetime.Transient));
+        var singletonServices = services
+            .Where(descriptor => descriptor.Lifetime == ServiceLifetime.Singleton)
+            .Select(descriptor => descriptor.ServiceType);
 
-        foreach (var captiveService in captiveScopedServices)
+        foreach (var singletonService in singletonServices)
         {
-            yield return $"Singleton service '{singletonService.FullName}' has one or more captive dependencies: {string.Join(", ", captiveService.ParameterType.FullName)}";
+            var captiveScopedServices = singletonService
+                .GetConstructors()
+                .SelectMany(property => property.GetParameters())
+                .Where(propertyType => services.Any(descriptor => descriptor.ServiceType == propertyType.ParameterType
+                                                                  && descriptor.Lifetime == ServiceLifetime.Scoped
+                                                                  || descriptor.Lifetime == ServiceLifetime.Transient));
+
+            foreach (var captiveService in captiveScopedServices)
+            {
+                yield return $"Singleton service '{singletonService.FullName}' has one or more captive dependencies: {string.Join(", ", captiveService.ParameterType.FullName)}";
+            }
         }
     }
-}
 }
