@@ -1,0 +1,1 @@
+public record EmailMessage(string Subject);
