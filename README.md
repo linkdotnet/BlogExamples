@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [Gracefully Handling Entity Framework Exceptions with EntityFramework.Exceptions](EntityFrameworkExceptions/)  | 25.07.2023   |
 | [Create your own Mediator (like Mediatr)](Mediator/)                                                           | 21.06.2023   |
 | [Verifying your DI Container](ServiceCollectionVerify/)                                                        | 30.04.2023   |
 | [.NET 8 Performance Edition](BenchmarkDotNet8/)                                                                | 12.04.2023   |
