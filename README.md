@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [The combined power of F# and C#](FSharpCombined/)                                                             | 30.07.2023   |
 | [Gracefully Handling Entity Framework Exceptions with EntityFramework.Exceptions](EntityFrameworkExceptions/)  | 25.07.2023   |
 | [Create your own Mediator (like Mediatr)](Mediator/)                                                           | 21.06.2023   |
 | [Verifying your DI Container](ServiceCollectionVerify/)                                                        | 30.04.2023   |

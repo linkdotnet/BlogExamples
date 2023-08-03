@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSharpCombined", "FSharpCombined\FSharpCombined.csproj", "{58E85AC9-4BDE-47E0-B0E3-CD5BBF721CA7}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpCombined.Domain", "FSharpCombined.Domain\FSharpCombined.Domain.fsproj", "{058BB19D-8FD9-4414-9AC6-ACD3C22FF4D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58E85AC9-4BDE-47E0-B0E3-CD5BBF721CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E85AC9-4BDE-47E0-B0E3-CD5BBF721CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E85AC9-4BDE-47E0-B0E3-CD5BBF721CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E85AC9-4BDE-47E0-B0E3-CD5BBF721CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{058BB19D-8FD9-4414-9AC6-ACD3C22FF4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{058BB19D-8FD9-4414-9AC6-ACD3C22FF4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{058BB19D-8FD9-4414-9AC6-ACD3C22FF4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{058BB19D-8FD9-4414-9AC6-ACD3C22FF4D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
