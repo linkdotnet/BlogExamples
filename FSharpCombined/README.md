@@ -1,4 +1,4 @@
-# .NET 8 Performance Edition
+# The combined power of F# and C#
 
 Where C# is the most dominant language in the .NET world, other languages are built on top of the Framework that deserves their respective place. F# is strong when it comes down to functional programming! In this blog post, we will leverage the power of F# and C# to showcase where both excel!
 
