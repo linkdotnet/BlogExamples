@@ -1,9 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
-using ChunkedList;
 
-BenchmarkRunner.Run<Benchmarks>();
+BenchmarkRunner.Run<ListBenchmarks>();
 
 [MemoryDiagnoser]
 public class ListBenchmarks
@@ -32,5 +32,45 @@ public class ListBenchmarks
         }
 
         return list;
+    }
+}
+
+public class ForBenchmark
+{
+    private readonly List<int> _list = new List<int>();
+    private readonly ChunkedList<int> _chunkedList = new ChunkedList<int>();
+
+    [GlobalSetup]
+    public void Setup()
+    {
+        _list.AddRange(Enumerable.Range(0, 20_000));
+        foreach (var item in _list)
+        {
+            _chunkedList.Add(item);
+        }
+    }
+    
+    [Benchmark(Baseline = true)]
+    public int ForList()
+    {
+        var sum = 0;
+        for (var i = 0; i < _list.Count; i++)
+        {
+            sum += _list[i];
+        }
+
+        return sum;
+    }
+    
+    [Benchmark]
+    public int ForChunkedList()
+    {
+        var sum = 0;
+        for (var i = 0; i < _chunkedList.Count; i++)
+        {
+            sum += _chunkedList[i];
+        }
+
+        return sum;
     }
 }
