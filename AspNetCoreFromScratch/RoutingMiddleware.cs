@@ -1,6 +1,7 @@
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNetCoreFromScratch;
 
@@ -29,7 +30,7 @@ public class RoutingMiddleware : IMiddleware
             var requestObj = JsonSerializer.Deserialize(requestBody, parameterType);
 
             // Fetch the controller from the DI container.
-            var controllerInstance = _serviceProvider.GetService(controllerAction.Controller);
+            var controllerInstance = _serviceProvider.GetRequiredService(controllerAction.Controller);
 
             // Invoke the controller method and get the result.
             var actionResult = controllerAction.Method.Invoke(controllerInstance, new[] { requestObj });
