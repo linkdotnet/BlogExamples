@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [Blazor with TailwindCSS](BlazorWithTailwind/)                                                                 | 18.11.2023   |
 | [Structured Concurrency in C#](StructuredConcurrency/)                                                         | 11.10.2023   |
 | [Building a Minimal ASP.NET Core clone](AspNetCoreFromScratch/)                                                | 14.09.2023   |
 | [Enabling List<T> to store large amounts of elements](ChunkedList/)                                            | 07.09.2023   |
