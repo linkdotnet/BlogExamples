@@ -12,13 +12,13 @@ public class Container
         _registeredTypes[typeof(TInterface)] = typeof(TImplementation);
     }
 
-public void RegisterSingleton<TInterface, TImplementation>() where TImplementation : TInterface
-{
-    Register<TInterface, TImplementation>();
+    public void RegisterSingleton<TInterface, TImplementation>() where TImplementation : TInterface
+    {
+        Register<TInterface, TImplementation>();
 
-    // add the type as singleton
-    _singletons[typeof(TInterface)] = null;
-}
+        // add the type as singleton
+        _singletons[typeof(TInterface)] = null;
+    }
 
     public TInterface Resolve<TInterface>()
     {
