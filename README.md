@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [Blazor .NET 8 - Enhanced Form Navigation](BlazorStaticForms/)                                                 | 22.11.2023   |
 | [Redux Pattern in Blazor](ReduxBlazor/)                                                                        | 04.11.2023   |
 | [Blazor with TailwindCSS](BlazorWithTailwind/)                                                                 | 18.10.2023   |
 | [Structured Concurrency in C#](StructuredConcurrency/)                                                         | 11.10.2023   |

@@ -1,0 +1,28 @@
+﻿@page "/"
+
+<form data-enhance>
+    <input name="query" placeholder="Search" value="@Query" />
+    <button>Search</button>
+</form>
+
+<ul>
+    @foreach (var item in _filteredEntries)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+@code {
+    [SupplyParameterFromQuery]
+    public string Query { get; set; }
+
+    public List<string> _entries = ["Chocolate", "Vanilla", "Strawberry"];
+    private List<string> _filteredEntries;
+
+    protected override void OnInitialized()
+    {
+        _filteredEntries = !string.IsNullOrEmpty(Query) 
+            ? _entries.Where(x => x.Contains(Query)).ToList() 
+            : _entries;
+    }
+}
