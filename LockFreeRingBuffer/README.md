@@ -1,4 +1,4 @@
-# An asynchronous lock free ring buffer for logging
+# An asynchronous lock free ring buffer for logging
 
 In this blog post, I showcase a very simple lock-free ring buffer for logging. I'll show why it's useful and how it works.
 
