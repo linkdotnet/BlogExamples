@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeHttpClient", "FakeHttpClient\FakeHttpClient.csproj", "{7B52AE75-C20B-4A27-8F30-86116C401794}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{1F86CE20-449A-4266-A3F0-BA14E0CAA806}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B52AE75-C20B-4A27-8F30-86116C401794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B52AE75-C20B-4A27-8F30-86116C401794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B52AE75-C20B-4A27-8F30-86116C401794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B52AE75-C20B-4A27-8F30-86116C401794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F86CE20-449A-4266-A3F0-BA14E0CAA806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F86CE20-449A-4266-A3F0-BA14E0CAA806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F86CE20-449A-4266-A3F0-BA14E0CAA806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F86CE20-449A-4266-A3F0-BA14E0CAA806}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

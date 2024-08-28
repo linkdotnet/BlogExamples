@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [How to test HttpClient inside API Tests](FakeHttpClient/)                                                     | 02.09.2024   |
 | [Fluent API to await multiple calls and get their respective results](TaskWhenAllResult/)                      | 12.04.2024   |
 | [An asynchronous lock free ring buffer for logging](LockFreeRingBuffer/)                                       | 03.01.2024   |
 | [Blazor .NET 8 - Enhanced Form Navigation](BlazorStaticForms/)                                                 | 22.11.2023   |

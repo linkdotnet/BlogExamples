@@ -6,13 +6,13 @@ public ref struct ValueStringBuilder
 {
     private int _bufferPosition;
     private Span<char> _buffer;
-    private char[]? arrayFromPool;
+    private char[]? _arrayFromPool;
 
     public ValueStringBuilder()
     {
         _bufferPosition = 0;
         _buffer = new char[32];
-        arrayFromPool = null;
+        _arrayFromPool = null;
     }
 
     public ref char this[int index] => ref _buffer[index];
@@ -47,9 +47,9 @@ public ref struct ValueStringBuilder
 
     public void Dispose()
     {
-        if (arrayFromPool is not null)
+        if (_arrayFromPool is not null)
         {
-            ArrayPool<char>.Shared.Return(arrayFromPool);
+            ArrayPool<char>.Shared.Return(_arrayFromPool);
         }
     }
 
@@ -58,9 +58,9 @@ public ref struct ValueStringBuilder
         var currentSize = _buffer.Length;
         var newSize = capacity > 0 ? capacity : currentSize * 2;
         var rented = ArrayPool<char>.Shared.Rent(newSize);
-        var oldBuffer = arrayFromPool;
+        var oldBuffer = _arrayFromPool;
         _buffer.CopyTo(rented);
-        _buffer = arrayFromPool = rented;
+        _buffer = _arrayFromPool = rented;
         if (oldBuffer is not null)
         {
             ArrayPool<char>.Shared.Return(oldBuffer);
