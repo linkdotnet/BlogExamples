@@ -4,7 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
-| [ToArray(Async) vs ToList(Async) in Entity Framework 8(BenchmarkToArrayToListEF/)]                             | 28.10.2024   |
+| [ToArray(Async) vs ToList(Async) in Entity Framework 8](BenchmarkToArrayToListEF/)                             | 28.10.2024   |
 | [How to test HttpClient inside API Tests](FakeHttpClient/)                                                     | 02.09.2024   |
 | [Fluent API to await multiple calls and get their respective results](TaskWhenAllResult/)                      | 12.04.2024   |
 | [An asynchronous lock free ring buffer for logging](LockFreeRingBuffer/)                                       | 03.01.2024   |
