@@ -37,33 +37,3 @@ public class VirtualizationAndInlineBenchmarks
         return sum;
     }
 }
-
-[SimpleJob(RuntimeMoniker.Net90, baseline: true)]
-[SimpleJob(RuntimeMoniker.Net10_0)]
-[MemoryDiagnoser]
-public class CommonListOperationBenchmarks
-{
-    [Benchmark]
-    public List<int> ListAdd10000()
-    {
-        var list = new List<int>();
-        for (var i = 0; i < 10_000; i++)
-        {
-            list.Add(i);
-        }
-
-        return list;
-    }
-
-    [Benchmark]
-    public List<int> ListAdd10000PreAlloc()
-    {
-        var list = new List<int>(10_000);
-        for (var i = 0; i < 10_000; i++)
-        {
-            list.Add(i);
-        }
-
-        return list;
-    }
-}
