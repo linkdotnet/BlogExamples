@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [.NET 10 Performance Edition](PerformanceNet10/)                                                               | 16.06.2025   |
 | [Solving Problems you wouldn't have if you wouldn't use Entity Framework](DynamicQuery/)                       | 24.04.2025   |
 | [Tailwind v4 with Blazor - It just got easier](BlazorTailwind4/)                                               | 03.03.2025   |
 | [ToArray(Async) vs ToList(Async) in Entity Framework 8](BenchmarkToArrayToListEF/)                             | 28.10.2024   |
