@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [EF Core 11 makes your split queries faster](SplitQueryEF11/)                                                  | 08.06.2026   |
 | [Disabling thread safety check in Entity Framework](EFDisableThreadSafety/)                                    | 04.08.2025   |
 | [.NET 10 Performance Edition](PerformanceNet10/)                                                               | 16.06.2025   |
 | [Solving Problems you wouldn't have if you wouldn't use Entity Framework](DynamicQuery/)                       | 24.04.2025   |
