@@ -1,0 +1,30 @@
+@page "/Signal"
+@implements IDisposable
+
+<h3>Signal use</h3>
+
+<Reactive>
+    <p>Elapsed time: @elapsedMilliseconds.Value milliseconds</p>
+    <p>Computed elapsed time: @elapsedSeconds.Value seconds</p>
+</Reactive>
+
+@code {
+    private readonly Signal<int> elapsedMilliseconds = Signals.Signal(0);
+    private Computed<int> elapsedSeconds = null!;
+    private Timer? timer;
+
+    protected override void OnInitialized()
+    {
+        elapsedSeconds = Signals.Computed(() => elapsedMilliseconds.Value / 1000);
+        timer = new Timer(
+            _ => elapsedMilliseconds.Update(value => value + 1000),
+            null,
+            TimeSpan.Zero,
+            TimeSpan.FromSeconds(1));
+    }
+
+    public void Dispose()
+    {
+        timer?.Dispose();
+    }
+}

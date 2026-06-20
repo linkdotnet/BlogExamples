@@ -1,0 +1,23 @@
+@page "/NoSignal"
+@implements IDisposable
+<h3>No Signal use</h3>
+
+<p>Elapsed time: @elapsedSeconds seconds</p>
+
+@code {
+    private Timer? timer;
+    private int elapsedSeconds;
+
+    protected override void OnInitialized()
+    {
+        timer = new Timer(_ =>
+        {
+            elapsedSeconds += 1;
+        }, null, 0, 1000);
+    }
+
+    public void Dispose()
+    {
+        timer?.Dispose();
+    }
+}
