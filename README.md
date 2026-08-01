@@ -4,6 +4,7 @@ Contains all of my examples from various blog posts. You can find a comprehensiv
 
 | BlogPost                                                                                                       | Publish Date |
 | -------------------------------------------------------------------------------------------------------------- | ------------ |
+| [.NET 11 Performance Edition](PerfNet11/)                                                                      | 01.08.2026   |
 | [Signals in Blazor](BlazorSignals/)                                                                            | 20.06.2026   |
 | [EF Core 11 makes your split queries faster](SplitQueryEF11/)                                                  | 08.06.2026   |
 | [Disabling thread safety check in Entity Framework](EFDisableThreadSafety/)                                    | 04.08.2025   |
