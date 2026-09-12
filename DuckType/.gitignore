@@ -1,0 +1,7 @@
+bin/
+obj/
+.vs/
+*.user
+samples/DuckType.Sample/Generated/
+BenchmarkDotNet.Artifacts/
+
